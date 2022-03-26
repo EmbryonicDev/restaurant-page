@@ -1,0 +1,20 @@
+{
+  "name": "10-restaurant-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmbryonicDev/restaurant-page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EmbryonicDev/restaurant-page/issues"
+  },
+  "homepage": "https://github.com/EmbryonicDev/restaurant-page#readme"
+}
