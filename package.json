@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/EmbryonicDev/restaurant-page/issues"
   },
-  "homepage": "https://github.com/EmbryonicDev/restaurant-page#readme"
+  "homepage": "https://github.com/EmbryonicDev/restaurant-page#readme",
+  "devDependencies": {
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2"
+  }
 }
