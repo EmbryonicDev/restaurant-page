@@ -30,7 +30,7 @@ const home = (() => {
   // main content
   const content = document.getElementById('content'),
     textOne = document.createElement('p');
-  textOne.innerText = "Congratulations! Your search is over, you've \njust found the best joint to cure your munchies! \nOur tasty food & beverages are sure to tantalize \nyour tastebuds...";
+  textOne.innerText = "Congratulations! Your search is over, you've \njust found the best joint to cure your munchies! \nOur tasty food & beverages are sure to \ntantalize...";
 
   const homeImg = document.createElement('img');
   homeImg.src = "../src/assets/images/meat-on-grill.jpg";
