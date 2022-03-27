@@ -58,3 +58,17 @@ body {
   text-shadow: 2px 2px 10px;
   cursor: pointer;
 }
+
+#content {
+  padding: 20px;
+  margin: 15px;
+  background-color: var(--colorSlate700Transparent);
+  color: var(--colorSlate100);
+  top: 125px;
+  border-radius: 12px;
+}
+
+.homeImg {
+  height: 375px;
+  border-radius: 20%;
+}
