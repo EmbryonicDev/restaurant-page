@@ -16,3 +16,45 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
+
+#myHeader {
+  padding-bottom: 10px;
+  width: 100%;
+  background: var(--colorSlate300Transparent);
+  position: sticky;
+  top: 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.headerDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-shadow: 0px 10px 8px rgba(0, 0, 0, 0.6);
+}
+
+.navWrap {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+.navWrap button {
+  width: 80px;
+  border: 0;
+  background-color: transparent;
+  border-bottom: solid transparent;
+  padding-bottom: 16px;
+}
+
+.navWrap button:active {
+  border-bottom: solid black;
+}
+
+.navWrap button:hover {
+  transform: translateY(-10%);
+  box-sizing: border-box;
+  text-shadow: 2px 2px 10px;
+  cursor: pointer;
+}
