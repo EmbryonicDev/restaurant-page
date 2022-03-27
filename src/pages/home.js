@@ -18,6 +18,15 @@ const home = (() => {
   navWrap.classList.add('navWrap');
   headerWrap.append(headerTitle, navWrap)
 
+  // buttons
+  const homeBtn = document.createElement('button'),
+    menuBtn = document.createElement('button'),
+    contactBtn = document.createElement('button');
+  homeBtn.innerText = 'Home';
+  menuBtn.innerText = 'Menu';
+  contactBtn.innerText = 'Contact';
+  navWrap.append(homeBtn, menuBtn, contactBtn);
+
 })();
 
 export { home };
