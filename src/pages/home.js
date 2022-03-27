@@ -41,6 +41,19 @@ const home = (() => {
   textTwo.innerText = "Visit us to feast like a king or place your order \n online now...";
 
   content.append(textOne, homeImg, textTwo);
+
+  // footer
+  const footer = document.createElement('FOOTER');
+  footer.id = "Myfooter";
+  footer.innerText = "© Embryonic Dev 2022";
+  const footerSpan = document.createElement('span'),
+    footerLogo = document.createElement('img');
+  footerLogo.src = "../src/assets/icons/tree-logo.svg";
+
+  document.body.appendChild(footer);
+  footer.append(footerSpan);
+  footerSpan.append(footerLogo);
+
 })();
 
 export { home };
