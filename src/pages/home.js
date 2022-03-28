@@ -58,10 +58,10 @@ const home = (() => {
     footerSpan.append(footerLogo);
   })();
 
-  return {
-    siteHeader,
-    siteFooter
-  }
+  // return {
+  //   siteHeader,
+  //   siteFooter
+  // }
 
 })();
 
