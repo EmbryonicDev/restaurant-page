@@ -1,9 +1,7 @@
 import { addHeader } from "../functions/globalFuntions";
 import { addFooter } from "../functions/globalFuntions";
 
-const home = (() => {
-  addHeader();
-
+const addHomeContent = () => {
   // main content
   const content = document.getElementById('content'),
     contentDiv = document.createElement('div');
@@ -22,8 +20,15 @@ const home = (() => {
 
   content.append(contentDiv)
   contentDiv.append(textOne, homeImg, textTwo);
+}
 
+const home = (() => {
+  addHeader();
+  addHomeContent();
   addFooter();
 })();
 
-export { home };
+export { 
+  home,
+  addHomeContent
+};
