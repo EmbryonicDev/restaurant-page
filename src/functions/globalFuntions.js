@@ -40,7 +40,14 @@ const addFooter = () => {
     footerSpan.append(footerLogo);
 }
 
+const clearContent = () => {
+  while(content.firstChild) {
+    content.removeChild(content.lastChild);
+  }
+}
+
 export {
   addHeader,
   addFooter,
+  clearContent,
 }
