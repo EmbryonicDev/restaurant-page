@@ -1,3 +1,5 @@
+import { addHomeContent } from "../pages/home";
+
 const addHeader = () => {
   // header
   const header = document.createElement('header');
@@ -25,6 +27,13 @@ const addHeader = () => {
   menuBtn.innerText = 'Menu';
   contactBtn.innerText = 'Contact';
   navWrap.append(homeBtn, menuBtn, contactBtn);
+
+  // eListerners
+  // display home page
+  homeBtn.onclick = () => {
+    clearContent();
+    addHomeContent();
+  }
 }
 
 const addFooter = () => {
