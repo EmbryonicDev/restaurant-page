@@ -48,7 +48,7 @@ body {
   padding-bottom: 16px;
 }
 
-.navWrap button:active {
+.navWrap button:focus {
   border-bottom: solid black;
 }
 
