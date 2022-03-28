@@ -6,7 +6,10 @@ const home = (() => {
 
   // main content
   const content = document.getElementById('content'),
-    textOne = document.createElement('p');
+    contentDiv = document.createElement('div');
+  contentDiv.id = 'homeContent'
+
+  const textOne = document.createElement('p');
   textOne.innerText = "Congratulations! Your search is over, you've \njust found the best joint to cure your munchies! \nOur tasty food & beverages are sure to tantalize \nyour tastebuds...";
 
   const homeImg = document.createElement('img');
@@ -17,7 +20,8 @@ const home = (() => {
   const textTwo = document.createElement('p');
   textTwo.innerText = "Visit us to feast like a king or place your order \n online now...";
 
-  content.append(textOne, homeImg, textTwo);
+  content.append(contentDiv)
+  contentDiv.append(textOne, homeImg, textTwo);
 
   addFooter();
 })();
