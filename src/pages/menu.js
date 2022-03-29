@@ -12,7 +12,7 @@ const addMenuContent = () => {
 
   const addMenuWraps = (subSection, item, sectionHeading, icon, namePrice, itemHeading, price, itemText) => {
     sectionHeading = document.createElement('H3')
-    sectionHeading.innerText = subSection.toString();
+    sectionHeading.innerText = subSection
 
     subSection = document.createElement('div');
     subSection.classList.add('subSection');
