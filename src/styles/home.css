@@ -74,6 +74,7 @@ body {
 }
 
 footer {
+  margin-top: auto;
   display: grid;
   grid-auto-flow: column;
   justify-content: center;
