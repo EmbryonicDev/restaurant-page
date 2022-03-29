@@ -1,4 +1,5 @@
 import { addHomeContent } from "../pages/home";
+import { addMenuContent } from "../pages/menu";
 
 const addHeader = () => {
   // header
@@ -33,6 +34,12 @@ const addHeader = () => {
   homeBtn.onclick = () => {
     clearContent();
     addHomeContent();
+  }
+
+  // display menu page
+  menuBtn.onclick = () => {
+    clearContent();
+    addMenuContent();
   }
 }
 
