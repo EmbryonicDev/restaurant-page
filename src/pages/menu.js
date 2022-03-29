@@ -40,9 +40,9 @@ const addMenuContent = () => {
   content.append(contentDiv)
 }
 
-const menu = (() => {
+const menu = () => {
   addMenuContent();
-})();
+};
 
 export {
   menu,
