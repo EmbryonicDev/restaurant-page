@@ -7,6 +7,7 @@ const addMenuContent = () => {
   // menu headings
   const menuHeadings = ['Starters', 'Main Courses', 'Desert', 'Drinks']
 
+  // create DOM elements
   const addMenuWraps = (subSection, item, sectionHeading, icon, namePrice, itemHeading, price, itemText) => {
     sectionHeading = document.createElement('H3')
     sectionHeading.innerText = subSection
