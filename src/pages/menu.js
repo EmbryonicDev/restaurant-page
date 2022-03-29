@@ -1,6 +1,3 @@
-import { addHeader } from "../functions/globalFuntions";
-import { addFooter } from "../functions/globalFuntions";
-
 const addMenuContent = () => {
   // main content
   const content = document.getElementById('content'),
