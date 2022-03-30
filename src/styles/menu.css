@@ -19,10 +19,10 @@
 .subSection {
   display: grid;
   grid-template-columns: repeat(4, 200px);
-  border: solid black;
   gap: 15px;
   padding: 12px;
   background: var(--colorSlate700Transparent);
+  border-radius: 12px;
 }
 
 .main-courses > h3 {
