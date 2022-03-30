@@ -96,6 +96,14 @@ const addMenuContent = () => {
       element.innerText = mainCourseName[itemCounter]
       itemCounter++;
     })
+
+    // add main course food prices
+    itemCounter = 0;
+    const mainCoursePrice = ['$7.50', '$6.50', '$7', '$9.50'];
+    mainCourseWrap.querySelectorAll('span').forEach(element => {
+      element.innerText = mainCoursePrice[itemCounter]
+      itemCounter++;
+    })
   })()
 
   const desertIcons = ['🥞', '🧇', '🍨', '🥧']
