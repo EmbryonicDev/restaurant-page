@@ -2,6 +2,7 @@
   --colorSlate300: #cbd5e1;
   --colorSlate700: #334155;
   --colorSlate300Transparent: rgb(203, 213, 225, 0.8);
+  --colorSlate500Transparent: rgb(100, 116, 139, 0.8);
   --colorSlate700Transparent: rgb(51, 65, 85, 0.8);
   --colorSlate100: #f1f5f9;
 }
@@ -25,10 +26,6 @@
   border-radius: 12px;
 }
 
-.main-courses > h3 {
-  grid-column: 1 / span 4;
-}
-
 .subSection h3 {
   grid-column: 1 / span 4;
   margin: 0;
@@ -38,7 +35,8 @@
   display: grid;
   grid-template: fit-content 3fr / repeat(2, fit-content);
   align-items: center;
-  border: solid black;
+  background: var(--colorSlate500Transparent);
+  border-radius: 8px;
 }
 
 .menuItem:hover {
