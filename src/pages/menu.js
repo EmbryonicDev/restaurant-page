@@ -162,7 +162,7 @@ const addMenuContent = () => {
     const desertsText = [
       "Drenched in maple syrup",
       "Served with ice cream",
-      "Vanillan, cholocolate, or strawberry",
+      "Vanilla, cholocolate, or strawberry",
       "Chocolate chip pecan pie"
     ];
     desertsWrap.querySelectorAll('p').forEach(element => {
