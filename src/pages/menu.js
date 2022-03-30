@@ -69,7 +69,7 @@ const addMenuContent = () => {
 
     // add starter food prices
     itemCounter = 0;
-    const starterPrice = ['$3', '$2', '$5', '$2.50'];
+    const starterPrice = ['$3', '$2', '$5', '$3.50'];
     starterWrap.querySelectorAll('span').forEach(element => {
       element.innerText = starterPrice[itemCounter];
       itemCounter++;
@@ -151,7 +151,7 @@ const addMenuContent = () => {
 
     // add desert prices
     itemCounter = 0;
-    const desertsPrice = ['$4.50', '$4', '$.350', '$4'];
+    const desertsPrice = ['$4.50', '$4', '$3.50', '$4'];
     desertsWrap.querySelectorAll('span').forEach(element => {
       element.innerText = desertsPrice[itemCounter];
       itemCounter++;
