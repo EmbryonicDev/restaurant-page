@@ -4,7 +4,7 @@ const addMenuContent = () => {
   contentDiv.id = 'menuContent'
   content.append(contentDiv);
   
-  const menuHeadings = ['Starters', 'Main-Courses', 'Desert', 'Drinks']
+  const menuHeadings = ['Starters', 'Main-Courses', 'Desert', 'Drinks'];
   let counterTwo = 0;
 
   // create DOM elements
@@ -15,7 +15,7 @@ const addMenuContent = () => {
     sectionHeading.innerText = subSection
 
     subSection = document.createElement('div');
-    subSection.classList.add('subSection', menuHeadings[counterTwo]);
+    subSection.classList.add('subSection', menuHeadings[counterTwo].toLowerCase());
 
     item = document.createElement('div');
     item.classList.add('menuItem');
@@ -48,6 +48,40 @@ const addMenuContent = () => {
   for (let i = 0; i < menuHeadings.length; i++) {
     addMenuWraps(menuHeadings[i], [i], [i], [i], [i], [i], [i], [i])
   }
+
+  // add starter food icons
+  const starterIcons = ['🧆', '🍿', '🍣', '🥪'];
+  let itemCounter = 0;
+  let starterWrap = document.querySelector('.starters');
+  starterWrap.querySelectorAll('.menuIcon').forEach(element => {
+    element.innerText = starterIcons[itemCounter];
+    itemCounter++
+  })
+
+  // add main-course food icons
+  const mainCourseIcons = ['🍔', '🌭', '🍝', '🥩'];
+  itemCounter = 0;
+  let mainCourseWrap = document.querySelector('.main-courses');
+  mainCourseWrap.querySelectorAll('.menuIcon').forEach(element => {
+    element.innerHTML = mainCourseIcons[itemCounter];
+    itemCounter++
+  })
+
+  const desertIcons = ['🥞', '🧇', '🍨', '🥧']
+  itemCounter = 0;
+  let desertsWrap = document.querySelector('.desert');
+  desertsWrap.querySelectorAll('.menuIcon').forEach(element => {
+    element.innerHTML = desertIcons[itemCounter];
+    itemCounter++
+  })
+
+  const drinksIcons = ['🍹', '🍺', '🍷', '☕']
+  itemCounter = 0;
+  let drinkssWrap = document.querySelector('.drinks');
+  drinkssWrap.querySelectorAll('.menuIcon').forEach(element => {
+    element.innerHTML = drinksIcons[itemCounter];
+    itemCounter++
+  })
 
 }
 
