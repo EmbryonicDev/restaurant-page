@@ -1,14 +1,12 @@
 const addMenuContent = () => {
-  // main content
-  const content = document.getElementById('content'),
-    contentDiv = document.createElement('div');
-  contentDiv.id = 'menuContent'
-
-  // menu headings
   const menuHeadings = ['Starters', 'Main Courses', 'Desert', 'Drinks']
 
   // create DOM elements
   const addMenuWraps = (subSection, item, sectionHeading, icon, namePrice, itemHeading, price, itemText) => {
+    const content = document.getElementById('content'),
+      contentDiv = document.createElement('div');
+    contentDiv.id = 'menuContent'
+
     sectionHeading = document.createElement('H3')
     sectionHeading.innerText = subSection
 
@@ -28,17 +26,18 @@ const addMenuContent = () => {
     price = document.createElement('span');
     itemText = document.createElement('p');
 
+    content.append(contentDiv)
     contentDiv.append(subSection);
     subSection.append(sectionHeading, item);
     item.append(icon, namePrice, itemText);
     namePrice.append(itemHeading, price);
+
   }
 
-  for(let i = 0; i < menuHeadings.length; i++) {
+  for (let i = 0; i < menuHeadings.length; i++) {
     addMenuWraps(menuHeadings[i], [i], [i], [i], [i], [i], [i], [i])
   }
 
-  content.append(contentDiv)
 }
 
 const menu = () => {
