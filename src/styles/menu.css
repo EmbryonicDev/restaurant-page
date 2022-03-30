@@ -13,6 +13,7 @@
   margin-bottom: 100px;
   display: grid;
   gap: 15px;
+  color: var(--colorSlate100);
 }
 
 .subSection {
@@ -21,6 +22,7 @@
   border: solid black;
   gap: 15px;
   padding: 12px;
+  background: var(--colorSlate700Transparent);
 }
 
 .main-courses > h3 {
