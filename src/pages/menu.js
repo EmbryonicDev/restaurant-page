@@ -1,9 +1,9 @@
 const addMenuContent = () => {
   const content = document.getElementById('content'),
-  contentDiv = document.createElement('div');
+    contentDiv = document.createElement('div');
   contentDiv.id = 'menuContent'
   content.append(contentDiv);
-  
+
   const menuHeadings = ['Starters', 'Main-Courses', 'Desert', 'Drinks'];
   let counterTwo = 0;
 
@@ -36,7 +36,7 @@ const addMenuContent = () => {
     namePrice.append(itemHeading, price);
 
     // create 3 additional menu items
-    while(counter < 3) {
+    while (counter < 3) {
       let myClone = item.cloneNode(true);
       subSection.append(myClone);
       counter++;
@@ -49,14 +49,28 @@ const addMenuContent = () => {
     addMenuWraps(menuHeadings[i], [i], [i], [i], [i], [i], [i], [i])
   }
 
-  // add starter food icons
-  const starterIcons = ['🧆', '🍿', '🍣', '🥪'];
   let itemCounter = 0;
-  let starterWrap = document.querySelector('.starters');
-  starterWrap.querySelectorAll('.menuIcon').forEach(element => {
-    element.innerText = starterIcons[itemCounter];
-    itemCounter++
-  })
+
+  // Add starter info
+  (() => {
+    // add starter food icons
+    const starterIcons = ['🧆', '🍿', '🍣', '🥪'];
+    let starterWrap = document.querySelector('.starters');
+    starterWrap.querySelectorAll('.menuIcon').forEach(element => {
+      element.innerText = starterIcons[itemCounter];
+      itemCounter++;
+    })
+
+    // add starter food names
+    itemCounter = 0;
+    const starterName = ['Falafel', 'Popcorn', 'Sushi', 'Sandwidch'];
+    starterWrap.querySelectorAll('H4').forEach(element => {
+      element.innerText = starterName[itemCounter]
+      itemCounter++;
+    })
+
+
+  })()
 
   // add main-course food icons
   const mainCourseIcons = ['🍔', '🌭', '🍝', '🥩'];
