@@ -69,6 +69,13 @@ const addMenuContent = () => {
       itemCounter++;
     })
 
+    // add starter food prices
+    itemCounter = 0;
+    const starterPrice = ['$3', '$2', '$5', '$2.50'];
+    starterWrap.querySelectorAll('span').forEach(element => {
+      element.innerText = starterPrice[itemCounter]
+      itemCounter++;
+    })
 
   })()
 
