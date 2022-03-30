@@ -23,6 +23,7 @@ body {
   background: var(--colorSlate300Transparent);
   position: fixed;
   top: 0;
+  left: 0;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
 }
 
@@ -72,11 +73,6 @@ body {
 .homeImg {
   height: 375px;
   border-radius: 20%;
-}
-
-/* menu styling */
-#menuContent {
-  
 }
 
 footer {
