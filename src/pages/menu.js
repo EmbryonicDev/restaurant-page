@@ -1,7 +1,7 @@
 const addMenuContent = () => {
   const content = document.getElementById('content'),
     contentDiv = document.createElement('div');
-  contentDiv.id = 'menuContent'
+  contentDiv.id = 'menuContent';
   content.append(contentDiv);
 
   const menuHeadings = ['Starters', 'Main-Courses', 'Desert', 'Drinks'];
@@ -12,7 +12,7 @@ const addMenuContent = () => {
     let counter = 0;
 
     sectionHeading = document.createElement('H3')
-    sectionHeading.innerText = subSection
+    sectionHeading.innerText = subSection;
 
     subSection = document.createElement('div');
     subSection.classList.add('subSection', menuHeadings[counterTwo].toLowerCase());
@@ -40,14 +40,14 @@ const addMenuContent = () => {
       let myClone = item.cloneNode(true);
       subSection.append(myClone);
       counter++;
-    }
+    };
 
     counterTwo++;
-  }
+  };
 
   for (let i = 0; i < menuHeadings.length; i++) {
     addMenuWraps(menuHeadings[i], [i], [i], [i], [i], [i], [i], [i])
-  }
+  };
 
   let itemCounter = 0;
   // Add starter info
@@ -58,7 +58,7 @@ const addMenuContent = () => {
     starterWrap.querySelectorAll('.menuIcon').forEach(element => {
       element.innerText = starterIcons[itemCounter];
       itemCounter++;
-    })
+    });
 
     // add starter food names
     itemCounter = 0;
@@ -66,7 +66,7 @@ const addMenuContent = () => {
     starterWrap.querySelectorAll('H4').forEach(element => {
       element.innerText = starterName[itemCounter];
       itemCounter++;
-    })
+    });
 
     // add starter food prices
     itemCounter = 0;
@@ -74,7 +74,7 @@ const addMenuContent = () => {
     starterWrap.querySelectorAll('span').forEach(element => {
       element.innerText = starterPrice[itemCounter];
       itemCounter++;
-    })
+    });
 
     // add starter text
     itemCounter = 0;
@@ -87,7 +87,7 @@ const addMenuContent = () => {
     starterWrap.querySelectorAll('p').forEach(element => {
       element.innerText = starterText[itemCounter];
       itemCounter++;
-    })
+    });
   })();
 
   // Add main course info
@@ -99,7 +99,7 @@ const addMenuContent = () => {
     mainCourseWrap.querySelectorAll('.menuIcon').forEach(element => {
       element.innerHTML = mainCourseIcons[itemCounter];
       itemCounter++
-    })
+    });
 
     // add main course food names
     itemCounter = 0;
@@ -107,7 +107,7 @@ const addMenuContent = () => {
     mainCourseWrap.querySelectorAll('H4').forEach(element => {
       element.innerText = mainCourseName[itemCounter];
       itemCounter++;
-    })
+    });
 
     // add main course food prices
     itemCounter = 0;
@@ -115,7 +115,7 @@ const addMenuContent = () => {
     mainCourseWrap.querySelectorAll('span').forEach(element => {
       element.innerText = mainCoursePrice[itemCounter];
       itemCounter++;
-    })
+    });
 
     // add main course text
     itemCounter = 0;
@@ -128,7 +128,7 @@ const addMenuContent = () => {
     mainCourseWrap.querySelectorAll('p').forEach(element => {
       element.innerText = mainCourseText[itemCounter];
       itemCounter++;
-    })
+    });
   })();
 
   // Add desert info
@@ -140,7 +140,7 @@ const addMenuContent = () => {
     desertsWrap.querySelectorAll('.menuIcon').forEach(element => {
       element.innerHTML = desertIcons[itemCounter];
       itemCounter++
-    })
+    });
 
     // add desert names
     itemCounter = 0;
@@ -148,7 +148,7 @@ const addMenuContent = () => {
     desertsWrap.querySelectorAll('H4').forEach(element => {
       element.innerText = desertsName[itemCounter];
       itemCounter++;
-    })
+    });
 
     // add desert prices
     itemCounter = 0;
@@ -156,7 +156,7 @@ const addMenuContent = () => {
     desertsWrap.querySelectorAll('span').forEach(element => {
       element.innerText = desertsPrice[itemCounter];
       itemCounter++;
-    })
+    });
 
     // add desert text
     itemCounter = 0;
@@ -169,7 +169,7 @@ const addMenuContent = () => {
     desertsWrap.querySelectorAll('p').forEach(element => {
       element.innerText = desertsText[itemCounter];
       itemCounter++;
-    })
+    });
   })();
 
   // Add drinks info
@@ -181,7 +181,7 @@ const addMenuContent = () => {
     drinksWrap.querySelectorAll('.menuIcon').forEach(element => {
       element.innerHTML = drinksIcons[itemCounter];
       itemCounter++
-    })
+    });
 
     // add drinks names
     itemCounter = 0;
@@ -189,7 +189,7 @@ const addMenuContent = () => {
     drinksWrap.querySelectorAll('H4').forEach(element => {
       element.innerText = drinksName[itemCounter]
       itemCounter++;
-    })
+    });
 
     // add drinks prices
     itemCounter = 0;
@@ -197,7 +197,7 @@ const addMenuContent = () => {
     drinksWrap.querySelectorAll('span').forEach(element => {
       element.innerText = drinksPrice[itemCounter]
       itemCounter++;
-    })
+    });
 
     // add drink text
     itemCounter = 0;
