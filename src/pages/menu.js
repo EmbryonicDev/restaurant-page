@@ -74,6 +74,15 @@ const addMenuContent = () => {
     element.innerHTML = desertIcons[itemCounter];
     itemCounter++
   })
+
+  const drinksIcons = ['🍹', '🍺', '🍷', '☕']
+  itemCounter = 0;
+  let drinkssWrap = document.querySelector('.drinks');
+  drinkssWrap.querySelectorAll('.menuIcon').forEach(element => {
+    element.innerHTML = drinksIcons[itemCounter];
+    itemCounter++
+  })
+
 }
 
 const menu = () => {
