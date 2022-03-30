@@ -1,9 +1,3 @@
-:root {
-  --colorSlate300Transparent: rgb(203, 213, 225, 0.8);
-  --colorSlate700Transparent: rgb(51, 65, 85, 0.8);
-  --colorSlate100: #f1f5f9;
-}
-
 body {
   height: 100vh;
   width: 100vw;
