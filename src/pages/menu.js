@@ -66,6 +66,14 @@ const addMenuContent = () => {
     element.innerHTML = mainCourseIcons[itemCounter];
     itemCounter++
   })
+
+  const desertIcons = ['🥞', '🧇', '🍨', '🥧']
+  itemCounter = 0;
+  let desertsWrap = document.querySelector('.desert');
+  desertsWrap.querySelectorAll('.menuIcon').forEach(element => {
+    element.innerHTML = desertIcons[itemCounter];
+    itemCounter++
+  })
 }
 
 const menu = () => {
