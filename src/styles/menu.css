@@ -1,8 +1,8 @@
 /* menu styling */
 #menuContent {
   margin: auto;
-  margin-top: 300px;
-  margin-bottom: 50px;
+  margin-top: 10rem;
+  margin-bottom: 100px;
   display: grid;
   gap: 15px;
 }
