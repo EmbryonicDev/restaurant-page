@@ -49,15 +49,14 @@ const addMenuContent = () => {
     addMenuWraps(menuHeadings[i], [i], [i], [i], [i], [i], [i], [i])
   }
 
+  // add starter food icons
   const starterIcons = ['🧆', '🍿', '🍣', '🥪'];
   let itemCounter = 0;
   let starterWrap = document.querySelector('.starters');
-  // let starterItems = starterWrap.querySelectorAll('.menuItem')
   starterWrap.querySelectorAll('.menuIcon').forEach(element => {
-    element.innerHTML = starterIcons[itemCounter];
+    element.innerText = starterIcons[itemCounter];
     itemCounter++
   })
-
 }
 
 const menu = () => {
