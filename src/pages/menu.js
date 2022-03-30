@@ -3,6 +3,7 @@ const addMenuContent = () => {
 
   // create DOM elements
   const addMenuWraps = (subSection, item, sectionHeading, icon, namePrice, itemHeading, price, itemText) => {
+    let counter = 0;
     const content = document.getElementById('content'),
       contentDiv = document.createElement('div');
     contentDiv.id = 'menuContent'
@@ -31,6 +32,14 @@ const addMenuContent = () => {
     subSection.append(sectionHeading, item);
     item.append(icon, namePrice, itemText);
     namePrice.append(itemHeading, price);
+
+    // create 3 additional menu items
+    while(counter < 3) {
+      let myClone = item.cloneNode(true);
+      subSection.append(myClone);
+      console.log(myClone);
+      counter++;
+    }
 
   }
 
