@@ -1,4 +1,6 @@
 :root {
+  --colorSlate300: #cbd5e1;
+  --colorSlate700: #334155;
   --colorSlate300Transparent: rgb(203, 213, 225, 0.8);
   --colorSlate700Transparent: rgb(51, 65, 85, 0.8);
   --colorSlate100: #f1f5f9;
@@ -20,7 +22,7 @@ body {
 #myHeader {
   padding-bottom: 10px;
   width: 100%;
-  background: var(--colorSlate300Transparent);
+  background: var(--colorSlate300);
   position: fixed;
   top: 0;
   left: 0;
@@ -82,7 +84,7 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 12px;
-  background: var(--colorSlate300Transparent);
+  background: var(--colorSlate300);
   position: sticky;
   bottom: 0;
   width: 100%;
