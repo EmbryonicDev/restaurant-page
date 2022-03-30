@@ -41,7 +41,6 @@ const addMenuContent = () => {
       subSection.append(myClone);
       counter++;
     };
-
     counterTwo++;
   };
 
@@ -103,7 +102,7 @@ const addMenuContent = () => {
 
     // add main course food names
     itemCounter = 0;
-    const mainCourseName = ['Burger', 'Hotdog', 'Spaghetti Bolognese', 'Steak'];
+    const mainCourseName = ['Burger', 'Hotdog', 'Spaghetti', 'Steak'];
     mainCourseWrap.querySelectorAll('H4').forEach(element => {
       element.innerText = mainCourseName[itemCounter];
       itemCounter++;
@@ -122,7 +121,7 @@ const addMenuContent = () => {
     const mainCourseText = [
       "Cheese burger with tomatto and lettuce",
       "Homemade mustard added",
-      "Finger licking good",
+      "With Bolognese sauce",
       "500g pure beef"
     ];
     mainCourseWrap.querySelectorAll('p').forEach(element => {
@@ -152,7 +151,7 @@ const addMenuContent = () => {
 
     // add desert prices
     itemCounter = 0;
-    const desertsPrice = ['$4.50', '$.4', '$.350', '$4'];
+    const desertsPrice = ['$4.50', '$4', '$.350', '$4'];
     desertsWrap.querySelectorAll('span').forEach(element => {
       element.innerText = desertsPrice[itemCounter];
       itemCounter++;
@@ -202,7 +201,7 @@ const addMenuContent = () => {
     // add drink text
     itemCounter = 0;
     const drinksText = [
-      "Orange, mango, aplle",
+      "Orange, mango, apple",
       "Home brewed",
       "Red or white",
       "Cappuccino or Late Macchiato"
