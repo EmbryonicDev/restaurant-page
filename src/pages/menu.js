@@ -76,17 +76,27 @@ const addMenuContent = () => {
       element.innerText = starterPrice[itemCounter]
       itemCounter++;
     })
+  })();
 
+  // Add main course info
+  (() => {
+    // add main-course food icons
+    const mainCourseIcons = ['🍔', '🌭', '🍝', '🥩'];
+    itemCounter = 0;
+    let mainCourseWrap = document.querySelector('.main-courses');
+    mainCourseWrap.querySelectorAll('.menuIcon').forEach(element => {
+      element.innerHTML = mainCourseIcons[itemCounter];
+      itemCounter++
+    })
+
+    // add main course food names
+    itemCounter = 0;
+    const mainCourseName = ['Burger', 'Hotdog', 'Spaghetti Bolognese', 'Steak'];
+    mainCourseWrap.querySelectorAll('H4').forEach(element => {
+      element.innerText = mainCourseName[itemCounter]
+      itemCounter++;
+    })
   })()
-
-  // add main-course food icons
-  const mainCourseIcons = ['🍔', '🌭', '🍝', '🥩'];
-  itemCounter = 0;
-  let mainCourseWrap = document.querySelector('.main-courses');
-  mainCourseWrap.querySelectorAll('.menuIcon').forEach(element => {
-    element.innerHTML = mainCourseIcons[itemCounter];
-    itemCounter++
-  })
 
   const desertIcons = ['🥞', '🧇', '🍨', '🥧']
   itemCounter = 0;
