@@ -48,6 +48,16 @@ const addMenuContent = () => {
   for (let i = 0; i < menuHeadings.length; i++) {
     addMenuWraps(menuHeadings[i], [i], [i], [i], [i], [i], [i], [i])
   }
+
+  const starterIcons = ['🧆', '🍿', '🍣', '🥪'];
+  let itemCounter = 0;
+  let starterWrap = document.querySelector('.starters');
+  // let starterItems = starterWrap.querySelectorAll('.menuItem')
+  starterWrap.querySelectorAll('.menuIcon').forEach(element => {
+    element.innerHTML = starterIcons[itemCounter];
+    itemCounter++
+  })
+
 }
 
 const menu = () => {
