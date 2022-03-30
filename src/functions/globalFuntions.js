@@ -29,12 +29,12 @@ const addHeader = () => {
   menuBtn.innerText = 'Menu';
   contactBtn.innerText = 'Contact';
   navWrap.append(homeBtn, menuBtn, contactBtn);
-  homeBtn.style.cssText = "border-bottom: solid black"
+  homeBtn.style.cssText = "border-bottom: solid #f1f5f9"
 
   // eListerners
   // display home page
   homeBtn.onclick = () => {
-    homeBtn.style.cssText = "border-bottom: solid black"
+    homeBtn.style.cssText = "border-bottom: solid #f1f5f9"
     clearContent();
     addHomeContent();
   }

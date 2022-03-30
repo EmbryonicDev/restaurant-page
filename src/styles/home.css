@@ -23,11 +23,12 @@ body {
   padding-bottom: 10px;
   width: 100%;
   height: 8rem;
-  background: var(--colorSlate300);
+  background: var(--colorSlate700);
   position: fixed;
   top: 0;
   left: 0;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 20px rgba(0, 0, 0);
+  color: var(--colorSlate100);
 }
 
 .headerDiv {
@@ -50,10 +51,11 @@ body {
   background-color: transparent;
   border-bottom: solid transparent;
   padding-bottom: 16px;
+  color: var(--colorSlate100);
 }
 
 .navWrap button:focus {
-  border-bottom: solid black;
+  border-bottom: solid var(--colorSlate100);
 }
 
 .navWrap button:hover {
@@ -101,7 +103,8 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 12px;
-  background: var(--colorSlate300);
+  background: var(--colorSlate700);
+  color: var(--colorSlate100);
   position: fixed;
   bottom: 0;
   width: 100vw;
