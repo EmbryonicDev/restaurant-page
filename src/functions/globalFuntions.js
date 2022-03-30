@@ -24,40 +24,44 @@ const addHeader = () => {
   const homeBtn = document.createElement('button'),
     menuBtn = document.createElement('button'),
     contactBtn = document.createElement('button');
+
   homeBtn.innerText = 'Home';
   menuBtn.innerText = 'Menu';
   contactBtn.innerText = 'Contact';
   navWrap.append(homeBtn, menuBtn, contactBtn);
+  homeBtn.style.cssText = "border-bottom: solid black"
 
   // eListerners
   // display home page
   homeBtn.onclick = () => {
+    homeBtn.style.cssText = "border-bottom: solid black"
     clearContent();
     addHomeContent();
   }
 
   // display menu page
   menuBtn.onclick = () => {
+    homeBtn.style.cssText = "border-bottom: solid transparent"
     clearContent();
     addMenuContent();
   }
 }
 
 const addFooter = () => {
-    const footer = document.createElement('FOOTER');
-    footer.id = "Myfooter";
-    footer.innerText = "© Embryonic Dev 2022";
-    const footerSpan = document.createElement('span'),
-      footerLogo = document.createElement('img');
-    footerLogo.src = "../src/assets/icons/tree-logo.svg";
-  
-    document.body.appendChild(footer);
-    footer.append(footerSpan);
-    footerSpan.append(footerLogo);
+  const footer = document.createElement('FOOTER');
+  footer.id = "Myfooter";
+  footer.innerText = "© Embryonic Dev 2022";
+  const footerSpan = document.createElement('span'),
+    footerLogo = document.createElement('img');
+  footerLogo.src = "../src/assets/icons/tree-logo.svg";
+
+  document.body.appendChild(footer);
+  footer.append(footerSpan);
+  footerSpan.append(footerLogo);
 }
 
 const clearContent = () => {
-  while(content.firstChild) {
+  while (content.firstChild) {
     content.removeChild(content.lastChild);
   }
 }
