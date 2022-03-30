@@ -50,7 +50,6 @@ const addMenuContent = () => {
   }
 
   let itemCounter = 0;
-
   // Add starter info
   (() => {
     // add starter food icons
@@ -65,7 +64,7 @@ const addMenuContent = () => {
     itemCounter = 0;
     const starterName = ['Falafel', 'Popcorn', 'Sushi', 'Sandwidch'];
     starterWrap.querySelectorAll('H4').forEach(element => {
-      element.innerText = starterName[itemCounter]
+      element.innerText = starterName[itemCounter];
       itemCounter++;
     })
 
@@ -73,7 +72,20 @@ const addMenuContent = () => {
     itemCounter = 0;
     const starterPrice = ['$3', '$2', '$5', '$2.50'];
     starterWrap.querySelectorAll('span').forEach(element => {
-      element.innerText = starterPrice[itemCounter]
+      element.innerText = starterPrice[itemCounter];
+      itemCounter++;
+    })
+
+    // add starter text
+    itemCounter = 0;
+    const starterText = [
+      "Secret Middle Eastern recipe",
+      "Add your own spices",
+      "Fresh fish used",
+      "Ham, cheese, and tomatto"
+    ];
+    starterWrap.querySelectorAll('p').forEach(element => {
+      element.innerText = starterText[itemCounter];
       itemCounter++;
     })
   })();
@@ -93,7 +105,7 @@ const addMenuContent = () => {
     itemCounter = 0;
     const mainCourseName = ['Burger', 'Hotdog', 'Spaghetti Bolognese', 'Steak'];
     mainCourseWrap.querySelectorAll('H4').forEach(element => {
-      element.innerText = mainCourseName[itemCounter]
+      element.innerText = mainCourseName[itemCounter];
       itemCounter++;
     })
 
@@ -101,7 +113,20 @@ const addMenuContent = () => {
     itemCounter = 0;
     const mainCoursePrice = ['$7.50', '$6.50', '$7', '$9.50'];
     mainCourseWrap.querySelectorAll('span').forEach(element => {
-      element.innerText = mainCoursePrice[itemCounter]
+      element.innerText = mainCoursePrice[itemCounter];
+      itemCounter++;
+    })
+
+    // add main course text
+    itemCounter = 0;
+    const mainCourseText = [
+      "Cheese burger with tomatto and lettuce",
+      "Homemade mustard added",
+      "Finger licking good",
+      "500g pure beef"
+    ];
+    mainCourseWrap.querySelectorAll('p').forEach(element => {
+      element.innerText = mainCourseText[itemCounter];
       itemCounter++;
     })
   })();
@@ -119,17 +144,30 @@ const addMenuContent = () => {
 
     // add desert names
     itemCounter = 0;
-    const desertCourseName = ['Pancakes', 'Waffle', 'Ice Cream', 'Choc Chip Pecan Pie'];
+    const desertsName = ['Pancakes', 'Waffle', 'Ice Cream', 'Pie'];
     desertsWrap.querySelectorAll('H4').forEach(element => {
-      element.innerText = desertCourseName[itemCounter]
+      element.innerText = desertsName[itemCounter];
       itemCounter++;
     })
 
     // add desert prices
     itemCounter = 0;
-    const desertCoursePrice = ['$4.50', '$.4', '$.350', '$4'];
+    const desertsPrice = ['$4.50', '$.4', '$.350', '$4'];
     desertsWrap.querySelectorAll('span').forEach(element => {
-      element.innerText = desertCoursePrice[itemCounter]
+      element.innerText = desertsPrice[itemCounter];
+      itemCounter++;
+    })
+
+    // add desert text
+    itemCounter = 0;
+    const desertsText = [
+      "Drenched in maple syrup",
+      "Served with ice cream",
+      "Vanillan, cholocolate, or strawberry",
+      "Chocolate chip pecan pie"
+    ];
+    desertsWrap.querySelectorAll('p').forEach(element => {
+      element.innerText = desertsText[itemCounter];
       itemCounter++;
     })
   })();
@@ -139,8 +177,8 @@ const addMenuContent = () => {
     // Add drinks icons
     const drinksIcons = ['🍹', '🍺', '🍷', '☕']
     itemCounter = 0;
-    let drinkssWrap = document.querySelector('.drinks');
-    drinkssWrap.querySelectorAll('.menuIcon').forEach(element => {
+    let drinksWrap = document.querySelector('.drinks');
+    drinksWrap.querySelectorAll('.menuIcon').forEach(element => {
       element.innerHTML = drinksIcons[itemCounter];
       itemCounter++
     })
@@ -148,7 +186,7 @@ const addMenuContent = () => {
     // add drinks names
     itemCounter = 0;
     const drinksName = ['Fruit Coctail', 'Beer', 'Wine', 'Coffee'];
-    drinkssWrap.querySelectorAll('H4').forEach(element => {
+    drinksWrap.querySelectorAll('H4').forEach(element => {
       element.innerText = drinksName[itemCounter]
       itemCounter++;
     })
@@ -156,12 +194,24 @@ const addMenuContent = () => {
     // add drinks prices
     itemCounter = 0;
     const drinksPrice = ['$2.50', '$3', '$2.50', '$2.50'];
-    drinkssWrap.querySelectorAll('span').forEach(element => {
+    drinksWrap.querySelectorAll('span').forEach(element => {
       element.innerText = drinksPrice[itemCounter]
       itemCounter++;
     })
-  })()
 
+    // add drink text
+    itemCounter = 0;
+    const drinksText = [
+      "Orange, mango, aplle",
+      "Home brewed",
+      "Red or white",
+      "Cappuccino or Late Macchiato"
+    ];
+    drinksWrap.querySelectorAll('p').forEach(element => {
+      element.innerText = drinksText[itemCounter];
+      itemCounter++;
+    })
+  })();
 }
 
 const menu = () => {
