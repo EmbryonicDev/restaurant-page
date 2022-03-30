@@ -14,7 +14,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-image: url('../assets/images/burger-fries.jpg'); */
+  background-image: url('../assets/images/burger-fries.jpg');
   background-attachment: fixed;
   background-size: cover;
 }
