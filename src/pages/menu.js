@@ -116,6 +116,22 @@ const addMenuContent = () => {
       element.innerHTML = desertIcons[itemCounter];
       itemCounter++
     })
+
+    // add desert names
+    itemCounter = 0;
+    const desertCourseName = ['Pancakes', 'Waffle', 'Ice Cream', 'Choc Chip Pecan Pie'];
+    desertsWrap.querySelectorAll('H4').forEach(element => {
+      element.innerText = desertCourseName[itemCounter]
+      itemCounter++;
+    })
+
+    // add desert prices
+    itemCounter = 0;
+    const desertCoursePrice = ['$4.50', '$.4', '$.350', '$4'];
+    desertsWrap.querySelectorAll('span').forEach(element => {
+      element.innerText = desertCoursePrice[itemCounter]
+      itemCounter++;
+    })
   })();
 
   // Add drinks info
@@ -129,6 +145,21 @@ const addMenuContent = () => {
       itemCounter++
     })
 
+    // add drinks names
+    itemCounter = 0;
+    const drinksName = ['Fruit Coctail', 'Beer', 'Wine', 'Coffee'];
+    drinkssWrap.querySelectorAll('H4').forEach(element => {
+      element.innerText = drinksName[itemCounter]
+      itemCounter++;
+    })
+
+    // add drinks prices
+    itemCounter = 0;
+    const drinksPrice = ['$2.50', '$3', '$2.50', '$2.50'];
+    drinkssWrap.querySelectorAll('span').forEach(element => {
+      element.innerText = drinksPrice[itemCounter]
+      itemCounter++;
+    })
   })()
 
 }
