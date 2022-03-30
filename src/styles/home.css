@@ -65,15 +65,28 @@ body {
 
 /* home page styling */
 #homeContent {
-  padding: 20px;
-  /* margin-top: 9rem;
-  margin-bottom: 3rem; */
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  padding: 16px;
   margin: auto;
-  margin-top: 9rem;
+  margin-top: 8rem;
   background-color: var(--colorSlate700Transparent);
   color: var(--colorSlate100);
   top: 125px;
   border-radius: 12px;
+}
+
+#homeContent p {
+  margin: 0;
+}
+
+#homeContent p:first-of-type {
+  padding-bottom: 12px;
+}
+
+#homeContent p:last-of-type {
+  padding-top: 12px;
 }
 
 .homeImg {
