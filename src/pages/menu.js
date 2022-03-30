@@ -57,6 +57,15 @@ const addMenuContent = () => {
     element.innerText = starterIcons[itemCounter];
     itemCounter++
   })
+
+  // add main-course food icons
+  const mainCourseIcons = ['🍔', '🌭', '🍝', '🥩'];
+  itemCounter = 0;
+  let mainCourseWrap = document.querySelector('.main-courses');
+  mainCourseWrap.querySelectorAll('.menuIcon').forEach(element => {
+    element.innerHTML = mainCourseIcons[itemCounter];
+    itemCounter++
+  })
 }
 
 const menu = () => {
