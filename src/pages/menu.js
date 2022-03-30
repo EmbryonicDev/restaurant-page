@@ -104,23 +104,32 @@ const addMenuContent = () => {
       element.innerText = mainCoursePrice[itemCounter]
       itemCounter++;
     })
+  })();
+
+  // Add desert info
+  (() => {
+    // Add desert icons
+    const desertIcons = ['🥞', '🧇', '🍨', '🥧']
+    itemCounter = 0;
+    let desertsWrap = document.querySelector('.desert');
+    desertsWrap.querySelectorAll('.menuIcon').forEach(element => {
+      element.innerHTML = desertIcons[itemCounter];
+      itemCounter++
+    })
+  })();
+
+  // Add drinks info
+  (() => {
+    // Add drinks icons
+    const drinksIcons = ['🍹', '🍺', '🍷', '☕']
+    itemCounter = 0;
+    let drinkssWrap = document.querySelector('.drinks');
+    drinkssWrap.querySelectorAll('.menuIcon').forEach(element => {
+      element.innerHTML = drinksIcons[itemCounter];
+      itemCounter++
+    })
+
   })()
-
-  const desertIcons = ['🥞', '🧇', '🍨', '🥧']
-  itemCounter = 0;
-  let desertsWrap = document.querySelector('.desert');
-  desertsWrap.querySelectorAll('.menuIcon').forEach(element => {
-    element.innerHTML = desertIcons[itemCounter];
-    itemCounter++
-  })
-
-  const drinksIcons = ['🍹', '🍺', '🍷', '☕']
-  itemCounter = 0;
-  let drinkssWrap = document.querySelector('.drinks');
-  drinkssWrap.querySelectorAll('.menuIcon').forEach(element => {
-    element.innerHTML = drinksIcons[itemCounter];
-    itemCounter++
-  })
 
 }
 
