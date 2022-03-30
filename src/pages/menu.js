@@ -4,7 +4,7 @@ const addMenuContent = () => {
   contentDiv.id = 'menuContent'
   content.append(contentDiv);
   
-  const menuHeadings = ['Starters', 'Main-Courses', 'Desert', 'Drinks']
+  const menuHeadings = ['Starters', 'Main-Courses', 'Desert', 'Drinks'];
   let counterTwo = 0;
 
   // create DOM elements
@@ -15,7 +15,7 @@ const addMenuContent = () => {
     sectionHeading.innerText = subSection
 
     subSection = document.createElement('div');
-    subSection.classList.add('subSection', menuHeadings[counterTwo]);
+    subSection.classList.add('subSection', menuHeadings[counterTwo].toLowerCase());
 
     item = document.createElement('div');
     item.classList.add('menuItem');
@@ -48,7 +48,6 @@ const addMenuContent = () => {
   for (let i = 0; i < menuHeadings.length; i++) {
     addMenuWraps(menuHeadings[i], [i], [i], [i], [i], [i], [i], [i])
   }
-
 }
 
 const menu = () => {
