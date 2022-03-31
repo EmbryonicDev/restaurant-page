@@ -88,6 +88,7 @@ body {
 
 #homeContent p {
   margin: 0;
+  line-height: 1.3rem;
 }
 
 #homeContent p:first-of-type {
@@ -99,7 +100,7 @@ body {
 }
 
 .homeImg {
-  height: 375px;
+  height: 365px;
   border-radius: 20%;
 }
 
