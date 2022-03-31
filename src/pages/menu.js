@@ -26,6 +26,7 @@ const addMenuContent = () => {
   };
 
   const menuData = {
+    menuHeadings: ['Starters', 'Main-Courses', 'Desert', 'Drinks'],
     starters: {
       icons: ['🧆', '🍿', '🍣', '🥪'],
       price: ['$3', '$2', '$5', '$3.50'],
@@ -49,17 +50,13 @@ const addMenuContent = () => {
       price: ['$2.50', '$3', '$2.50', '$2.50'],
       text: ["Orange, mango, apple", "Home brewed", "Red or white", "Cappuccino or Late Macchiato"]
     }
-  }
-
-  console.log(menuData.deserts.price[2])
-
-  const menuHeadings = ['Starters', 'Main-Courses', 'Desert', 'Drinks'];
+  };
 
   // create DOM elements (menu items empty at this point)
   (() => {
-    for (let i = 0; i < menuHeadings.length; i++) {
-      elFactory('div', { class: `subSection ${menuHeadings[i]}` }, contentDiv,
-        elFactory('H3', "", "", menuHeadings[i]),
+    for (let i = 0; i < menuData.menuHeadings.length; i++) {
+      elFactory('div', { class: `subSection ${menuData.menuHeadings[i]}` }, contentDiv,
+        elFactory('H3', "", "", menuData.menuHeadings[i]),
         elFactory('div', { class: 'menuItem' }, '',
           elFactory('div', { class: 'menuIcon' }, '', ""),
           elFactory('div', { class: 'namePrice' }, '',
@@ -70,7 +67,7 @@ const addMenuContent = () => {
       );
       // create 3 additional menu items per subSection
       let item = document.querySelector('.menuItem');
-      let section = document.querySelector(`.${menuHeadings[i]}`);
+      let section = document.querySelector(`.${menuData.menuHeadings[i]}`);
       for (let i = 0; i < 3; i++) {
         let myClone = item.cloneNode(true);
         section.append(myClone);
