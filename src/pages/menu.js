@@ -25,36 +25,33 @@ const addMenuContent = () => {
     return el
   };
 
-  const menuData = [
-    {
-      // starters
+  const menuData = {
+    starters: {
       icons: ['🧆', '🍿', '🍣', '🥪'],
-      name: ['Falafel', 'Popcorn', 'Sushi', 'Sandwidch'],
       price: ['$3', '$2', '$5', '$3.50'],
       text: ["Secret Middle Eastern recipe", "Add your own spices", "Fresh fish used", "Ham, cheese, and tomatto"]
     },
-    {
-      // main courses
+    mainCourses: {
       icons: ['🍔', '🌭', '🍝', '🥩'],
       name: ['Burger', 'Hotdog', 'Spaghetti', 'Steak'],
       price: ['$7.50', '$6.50', '$7', '$9.50'],
       text: ["Cheese burger with tomatto and lettuce", "Homemade mustard added", "With Bolognese sauce", "500g pure beef"]
     },
-    {
-      // deserts
+    deserts: {
       icons: ['🥞', '🧇', '🍨', '🥧'],
       name: ['Pancakes', 'Waffle', 'Ice Cream', 'Pie'],
       price: ['$4.50', '$4', '$3.50', '$4'],
       text: ["Drenched in maple syrup", "Served with ice cream", "Vanilla, cholocolate, or strawberry", "Chocolate chip pecan pie"]
     },
-    {
-      // drinks
+    drinks: {
       icons: ['🍹', '🍺', '🍷', '☕'],
       name: ['Fruit Coctail', 'Beer', 'Wine', 'Coffee'],
       price: ['$2.50', '$3', '$2.50', '$2.50'],
       text: ["Orange, mango, apple", "Home brewed", "Red or white", "Cappuccino or Late Macchiato"]
     }
-  ]
+  }
+
+  console.log(menuData.deserts.price[2])
 
   const menuHeadings = ['Starters', 'Main-Courses', 'Desert', 'Drinks'];
 
