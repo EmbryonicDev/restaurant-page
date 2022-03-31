@@ -25,6 +25,37 @@ const addMenuContent = () => {
     return el
   };
 
+  const menuData = [
+    {
+      // starters
+      icons: ['🧆', '🍿', '🍣', '🥪'],
+      name: ['Falafel', 'Popcorn', 'Sushi', 'Sandwidch'],
+      price: ['$3', '$2', '$5', '$3.50'],
+      text: ["Secret Middle Eastern recipe", "Add your own spices", "Fresh fish used", "Ham, cheese, and tomatto"]
+    },
+    {
+      // main courses
+      icons: ['🍔', '🌭', '🍝', '🥩'],
+      name: ['Burger', 'Hotdog', 'Spaghetti', 'Steak'],
+      price: ['$7.50', '$6.50', '$7', '$9.50'],
+      text: ["Cheese burger with tomatto and lettuce", "Homemade mustard added", "With Bolognese sauce", "500g pure beef"]
+    },
+    {
+      // deserts
+      icons: ['🥞', '🧇', '🍨', '🥧'],
+      name: ['Pancakes', 'Waffle', 'Ice Cream', 'Pie'],
+      price: ['$4.50', '$4', '$3.50', '$4'],
+      text: ["Drenched in maple syrup", "Served with ice cream", "Vanilla, cholocolate, or strawberry", "Chocolate chip pecan pie"]
+    },
+    {
+      // drinks
+      icons: ['🍹', '🍺', '🍷', '☕'],
+      name: ['Fruit Coctail', 'Beer', 'Wine', 'Coffee'],
+      price: ['$2.50', '$3', '$2.50', '$2.50'],
+      text: ["Orange, mango, apple", "Home brewed", "Red or white", "Cappuccino or Late Macchiato"]
+    }
+  ]
+
   const menuHeadings = ['Starters', 'Main-Courses', 'Desert', 'Drinks'];
 
   // create DOM elements (menu items empty at this point)
@@ -43,8 +74,6 @@ const addMenuContent = () => {
       // create 3 additional menu items per subSection
       let item = document.querySelector('.menuItem');
       let section = document.querySelector(`.${menuHeadings[i]}`);
-      console.log(item);
-      console.log(section);
       for (let i = 0; i < 3; i++) {
         let myClone = item.cloneNode(true);
         section.append(myClone);
