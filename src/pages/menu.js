@@ -5,17 +5,16 @@ const addMenuContent = () => {
   content.append(contentDiv);
 
   const menuHeadings = ['Starters', 'Main-Courses', 'Desert', 'Drinks'];
-  let counterTwo = 0;
+  let counter = 0;
 
   // create DOM elements
   const addMenuWraps = (subSection, item, sectionHeading, icon, namePrice, itemHeading, price, itemText) => {
-    let counter = 0;
 
     sectionHeading = document.createElement('H3')
     sectionHeading.innerText = subSection;
 
     subSection = document.createElement('div');
-    subSection.classList.add('subSection', menuHeadings[counterTwo].toLowerCase());
+    subSection.classList.add('subSection', menuHeadings[counter].toLowerCase());
 
     item = document.createElement('div');
     item.classList.add('menuItem');
@@ -35,13 +34,12 @@ const addMenuContent = () => {
     item.append(icon, namePrice, itemText);
     namePrice.append(itemHeading, price);
 
-    // create 3 additional menu items
-    while (counter < 3) {
+    // create 3 additional menu items per subSection
+    for (let i = 0; i < 3; i++) {
       let myClone = item.cloneNode(true);
       subSection.append(myClone);
-      counter++;
-    };
-    counterTwo++;
+    }
+    counter++;
   };
 
   for (let i = 0; i < menuHeadings.length; i++) {
