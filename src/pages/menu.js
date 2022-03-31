@@ -52,10 +52,12 @@ const addMenuContent = () => {
     }
   };
 
+  console.table(menuData);
+
   // create DOM elements (menu items empty at this point)
   (() => {
     for (let i = 0; i < menuData.menuHeadings.length; i++) {
-      elFactory('div', { class: `subSection ${menuData.menuHeadings[i]}` }, contentDiv,
+      elFactory('div', { class: `subSection ${menuData.menuHeadings[i].toLowerCase()}` }, contentDiv,
         elFactory('H3', "", "", menuData.menuHeadings[i]),
         elFactory('div', { class: 'menuItem' }, '',
           elFactory('div', { class: 'menuIcon' }, '', ""),
@@ -75,16 +77,17 @@ const addMenuContent = () => {
     }
   })();
 
-  // let itemCounter = 0;
-  // // Add starter info
-  // (() => {
-  //   // add starter food icons
-  //   const starterIcons = ['🧆', '🍿', '🍣', '🥪'];
-  //   let starterWrap = document.querySelector('.starters');
-  //   starterWrap.querySelectorAll('.menuIcon').forEach(element => {
-  //     element.innerText = starterIcons[itemCounter];
-  //     itemCounter++;
-  //   });
+  let itemCounter = 0;
+  // Add starter info
+  (() => {
+    // add starter food icons
+    const starterIcons = ['🧆', '🍿', '🍣', '🥪'];
+    let starterWrap = document.querySelector('.starters');
+    starterWrap.querySelectorAll('.menuIcon').forEach(element => {
+      element.innerText = starterIcons[itemCounter];
+      itemCounter++;
+    });
+    })();
 
   //   // add starter food names
   //   itemCounter = 0;
