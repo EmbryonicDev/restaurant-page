@@ -27,6 +27,7 @@ const addMenuContent = () => {
 
   const menuData = {
     menuHeadings: ['Starters', 'Main-Courses', 'Desert', 'Drinks'],
+    classForHeading: ['starters', 'mainCourses', 'deserts', 'drinks'],
     starters: {
       icons: ['🧆', '🍿', '🍣', '🥪'],
       price: ['$3', '$2', '$5', '$3.50'],
@@ -52,12 +53,10 @@ const addMenuContent = () => {
     }
   };
 
-  console.table(menuData);
-
   // create DOM elements (menu items empty at this point)
   (() => {
-    for (let i = 0; i < menuData.menuHeadings.length; i++) {
-      elFactory('div', { class: `subSection ${menuData.menuHeadings[i].toLowerCase()}` }, contentDiv,
+    for (let i = 0; i < menuData.classForHeading.length; i++) {
+      elFactory('div', { class: `subSection ${menuData.classForHeading[i]}` }, contentDiv,
         elFactory('H3', "", "", menuData.menuHeadings[i]),
         elFactory('div', { class: 'menuItem' }, '',
           elFactory('div', { class: 'menuIcon' }, '', ""),
@@ -69,7 +68,7 @@ const addMenuContent = () => {
       );
       // create 3 additional menu items per subSection
       let item = document.querySelector('.menuItem');
-      let section = document.querySelector(`.${menuData.menuHeadings[i]}`);
+      let section = document.querySelector(`.${menuData.classForHeading[i]}`);
       for (let i = 0; i < 3; i++) {
         let myClone = item.cloneNode(true);
         section.append(myClone);
@@ -77,17 +76,18 @@ const addMenuContent = () => {
     }
   })();
 
+  console.log(menuData.starters.icons[0]);
+
   let itemCounter = 0;
-  // Add starter info
-  (() => {
+  // // Add starter info
+  // (() => {
     // add starter food icons
     const starterIcons = ['🧆', '🍿', '🍣', '🥪'];
     let starterWrap = document.querySelector('.starters');
-    starterWrap.querySelectorAll('.menuIcon').forEach(element => {
-      element.innerText = starterIcons[itemCounter];
+    starterWrap.querySelectorAll('.menuItem').forEach(element => {
+      element.innerText = menuData.starters.icons[itemCounter];
       itemCounter++;
     });
-    })();
 
   //   // add starter food names
   //   itemCounter = 0;
