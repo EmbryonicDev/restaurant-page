@@ -28,6 +28,9 @@ const addMenuContent = () => {
   const menuData = {
     menuHeadings: ['Starters', 'Main-Courses', 'Desert', 'Drinks'],
     classForHeading: ['starters', 'mainCourses', 'deserts', 'drinks'],
+    selector: ['.starters', '.mainCourses', '.deserts', '.drinks'],
+    targetGroup: ['.menuIcon', 'H4', 'span', 'p'],
+    itemContent: ['icons', 'name', 'price', 'text'],
     starters: {
       icons: ['🧆', '🍿', '🍣', '🥪'],
       name: ['Falafel', 'Popcorn', 'Sushi', 'Sandwidch'],
@@ -77,13 +80,6 @@ const addMenuContent = () => {
     }
   })();
 
-  const required = {
-    foodCategory: ['starters', 'mainCourses', 'deserts', 'drinks'],
-    selector: ['.starters', '.mainCourses', '.deserts', '.drinks'],
-    targetGroup: ['.menuIcon', 'H4', 'span', 'p'],
-    itemContent: ['icons', 'name', 'price', 'text'],
-  }
-
   // factory to populate menu items
   const addMenuData = (selector, targetGroup, foodCategory, itemContent) => {
     const container = document.querySelector(selector);
@@ -106,7 +102,7 @@ const addMenuContent = () => {
         categoryChanger++;
         itemChanger = 0;
       }
-      addMenuData(required.selector[categoryChanger], required.targetGroup[itemChanger], required.foodCategory[categoryChanger], required.itemContent[itemChanger]);
+      addMenuData(menuData.selector[categoryChanger], menuData.targetGroup[itemChanger], menuData.classForHeading[categoryChanger], menuData.itemContent[itemChanger]);
       itemChanger++;
     }
   })();
