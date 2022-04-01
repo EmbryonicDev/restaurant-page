@@ -95,14 +95,17 @@ const addMenuContent = () => {
   };
 
   (() => {
-    let counter = 0;
-    for (let i = 0; i < required.foodCategory.length; i++) {
-      addMenuData(required.selector[0], required.targetGroup[i], required.foodCategory[0], required.itemContent[i]);
-      addMenuData(required.selector[1], required.targetGroup[i], required.foodCategory[1], required.itemContent[i]);
-      addMenuData(required.selector[2], required.targetGroup[i], required.foodCategory[2], required.itemContent[i]);
-      addMenuData(required.selector[3], required.targetGroup[i], required.foodCategory[3], required.itemContent[i]);
-      counter++;
-      console.log({counter});
+    let categoryChanger = 0;
+    let itemChanger = 0;
+    for (let i = 0; i < 16; i++) {
+      // + 1 to categoryChanger after populating "starters" to switch to next course
+      // itemChanger resets to 0 after each category is filled
+      if (i == 4 || i == 8 || i == 12 || i == 16) {
+        categoryChanger++;
+        itemChanger = 0;
+      }
+      addMenuData(required.selector[categoryChanger], required.targetGroup[itemChanger], required.foodCategory[categoryChanger], required.itemContent[itemChanger]);
+      itemChanger++;
     }
   })();
 }
