@@ -1,6 +1,5 @@
 const addMenuContent = () => {
   const menuData = {
-    menuHeadings: ['Starters', 'Main Courses', 'Deserts', 'Drinks'],
     classForHeading: ['starters', 'mainCourses', 'deserts', 'drinks'],
     starters: {
       icons: ['🧆', '🍿', '🍣', '🥪'],
@@ -53,10 +52,11 @@ const addMenuContent = () => {
 
   // create DOM elements (menu items empty at this point)
   (() => {
+    const menuHeadings = ['Starters', 'Main Courses', 'Deserts', 'Drinks'];
     const contentDiv = elFactory('div', { id: "menuContent" }, content);
     for (let i = 0; i < menuData.classForHeading.length; i++) {
       elFactory('div', { class: `subSection ${menuData.classForHeading[i]}` }, contentDiv,
-        elFactory('H3', "", "", menuData.menuHeadings[i]),
+        elFactory('H3', "", "", menuHeadings[i]),
         elFactory('div', { class: 'menuItem' }, '',
           elFactory('div', { class: 'menuIcon' }, '', ""),
           elFactory('div', { class: 'namePrice' }, '',
