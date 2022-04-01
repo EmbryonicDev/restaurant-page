@@ -63,7 +63,7 @@ const addMenuContent = () => {
           elFactory('div', { class: 'menuIcon' }, '', ""),
           elFactory('div', { class: 'namePrice' }, '',
             elFactory('H4', '', '', ''),
-            elFactory('div', '', '', '')),
+            elFactory('span', '', '', '')),
           elFactory('p', '', '', '')
         ),
       );
@@ -94,7 +94,7 @@ const addMenuContent = () => {
     })
   };
 
-  (() => {
+  const feedMenuData = (() => {
     let categoryChanger = 0;
     let itemChanger = 0;
     for (let i = 0; i < 16; i++) {
