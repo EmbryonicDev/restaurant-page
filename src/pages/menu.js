@@ -2,9 +2,6 @@ const addMenuContent = () => {
   const menuData = {
     menuHeadings: ['Starters', 'Main Courses', 'Deserts', 'Drinks'],
     classForHeading: ['starters', 'mainCourses', 'deserts', 'drinks'],
-    selector: ['.starters', '.mainCourses', '.deserts', '.drinks'],
-    targetGroup: ['.menuIcon', 'H4', 'span', 'p'],
-    itemContent: ['icons', 'name', 'price', 'text'],
     starters: {
       icons: ['🧆', '🍿', '🍣', '🥪'],
       name: ['Falafel', 'Popcorn', 'Sushi', 'Sandwidch'],
@@ -56,7 +53,7 @@ const addMenuContent = () => {
 
   // create DOM elements (menu items empty at this point)
   (() => {
-    const contentDiv = elFactory('div', {id: "menuContent"}, content);
+    const contentDiv = elFactory('div', { id: "menuContent" }, content);
     for (let i = 0; i < menuData.classForHeading.length; i++) {
       elFactory('div', { class: `subSection ${menuData.classForHeading[i]}` }, contentDiv,
         elFactory('H3', "", "", menuData.menuHeadings[i]),
@@ -92,6 +89,9 @@ const addMenuContent = () => {
 
   // populate menu items
   const feedMenuData = (() => {
+    const selector = ['.starters', '.mainCourses', '.deserts', '.drinks'];
+    const targetGroup = ['.menuIcon', 'H4', 'span', 'p'];
+    const itemContent = ['icons', 'name', 'price', 'text'];
     let categoryChanger = 0;
     let itemChanger = 0;
     for (let i = 0; i < 16; i++) {
@@ -101,7 +101,7 @@ const addMenuContent = () => {
         categoryChanger++;
         itemChanger = 0;
       }
-      addMenuData(menuData.selector[categoryChanger], menuData.targetGroup[itemChanger], menuData.classForHeading[categoryChanger], menuData.itemContent[itemChanger]);
+      addMenuData(selector[categoryChanger], targetGroup[itemChanger], menuData.classForHeading[categoryChanger], itemContent[itemChanger]);
       itemChanger++;
     }
   })();
