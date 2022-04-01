@@ -84,6 +84,7 @@ const addMenuContent = () => {
     itemContent: ['icons', 'name', 'price', 'text'],
   }
 
+  // factory to populate menu items
   const addMenuData = (selector, targetGroup, foodCategory, itemContent) => {
     const container = document.querySelector(selector);
     let counter = 0;
@@ -94,6 +95,7 @@ const addMenuContent = () => {
     })
   };
 
+  // populate menu items
   const feedMenuData = (() => {
     let categoryChanger = 0;
     let itemChanger = 0;
