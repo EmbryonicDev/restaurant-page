@@ -26,7 +26,7 @@ const addMenuContent = () => {
   };
 
   const menuData = {
-    menuHeadings: ['Starters', 'Main-Courses', 'Desert', 'Drinks'],
+    menuHeadings: ['Starters', 'Main Courses', 'Deserts', 'Drinks'],
     classForHeading: ['starters', 'mainCourses', 'deserts', 'drinks'],
     selector: ['.starters', '.mainCourses', '.deserts', '.drinks'],
     targetGroup: ['.menuIcon', 'H4', 'span', 'p'],
