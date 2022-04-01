@@ -35,6 +35,7 @@ const addHeader = () => {
   // display home page
   homeBtn.onclick = () => {
     homeBtn.style.cssText = "border-bottom: solid #f1f5f9"
+    menuBtn.style.cssText = "border-bottom: solid transparent"
     clearContent();
     addHomeContent();
   }
@@ -42,6 +43,7 @@ const addHeader = () => {
   // display menu page
   menuBtn.onclick = () => {
     homeBtn.style.cssText = "border-bottom: solid transparent"
+    menuBtn.style.cssText = "border-bottom: solid #f1f5f9"
     clearContent();
     addMenuContent();
   }
