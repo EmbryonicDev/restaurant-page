@@ -53,12 +53,10 @@ const addMenuContent = () => {
   };
 
   const content = document.getElementById('content');
-  const contentDiv = document.createElement('div');
-  contentDiv.id = 'menuContent';
-  content.append(contentDiv);
 
   // create DOM elements (menu items empty at this point)
   (() => {
+    const contentDiv = elFactory('div', {id: "menuContent"}, content);
     for (let i = 0; i < menuData.classForHeading.length; i++) {
       elFactory('div', { class: `subSection ${menuData.classForHeading[i]}` }, contentDiv,
         elFactory('H3', "", "", menuData.menuHeadings[i]),
