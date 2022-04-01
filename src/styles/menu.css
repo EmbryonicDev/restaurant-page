@@ -62,6 +62,7 @@
 
 .namePrice > span {
   font-weight: 600;
+  color: red;
 }
 
 .menuItem > p {
