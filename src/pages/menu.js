@@ -1,30 +1,4 @@
 const addMenuContent = () => {
-  const content = document.getElementById('content'),
-    contentDiv = document.createElement('div');
-  contentDiv.id = 'menuContent';
-  content.append(contentDiv);
-
-  // DOM element creator
-  const elFactory = (type, attributes, appendTo, ...children) => {
-    const el = document.createElement(type)
-
-    for (let key in attributes) {
-      el.setAttribute(key, attributes[key])
-    }
-
-    children.forEach(child => {
-      if (typeof child === 'string') {
-        el.appendChild(document.createTextNode(child))
-      } else {
-        el.appendChild(child)
-      }
-    })
-
-    if (appendTo != "") appendTo.append(el);
-
-    return el
-  };
-
   const menuData = {
     menuHeadings: ['Starters', 'Main Courses', 'Deserts', 'Drinks'],
     classForHeading: ['starters', 'mainCourses', 'deserts', 'drinks'],
@@ -57,6 +31,32 @@ const addMenuContent = () => {
     }
   };
 
+  // DOM element creator
+  const elFactory = (type, attributes, appendTo, ...children) => {
+    const el = document.createElement(type)
+
+    for (let key in attributes) {
+      el.setAttribute(key, attributes[key])
+    }
+
+    children.forEach(child => {
+      if (typeof child === 'string') {
+        el.appendChild(document.createTextNode(child))
+      } else {
+        el.appendChild(child)
+      }
+    })
+
+    if (appendTo != "") appendTo.append(el);
+
+    return el
+  };
+
+  const content = document.getElementById('content');
+  const contentDiv = document.createElement('div');
+  contentDiv.id = 'menuContent';
+  content.append(contentDiv);
+
   // create DOM elements (menu items empty at this point)
   (() => {
     for (let i = 0; i < menuData.classForHeading.length; i++) {
@@ -66,7 +66,8 @@ const addMenuContent = () => {
           elFactory('div', { class: 'menuIcon' }, '', ""),
           elFactory('div', { class: 'namePrice' }, '',
             elFactory('H4', '', '', ''),
-            elFactory('span', '', '', '')),
+            elFactory('span', '', '', '')
+          ),
           elFactory('p', '', '', '')
         ),
       );
