@@ -1,5 +1,6 @@
 import { addHomeContent } from "../pages/home";
 import { addMenuContent } from "../pages/menu";
+import { addContactContent } from "../pages/contact";
 
 const addHeader = () => {
   // header
@@ -58,6 +59,7 @@ const addHeader = () => {
     contactBtn.onclick = () => {
       selectedBtnBorder(contactBtn, menuBtn, homeBtn);
       clearContent();
+      addContactContent();
     }
   })();
 }
