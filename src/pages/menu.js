@@ -1,3 +1,24 @@
+// DOM element creator
+export const elFactory = (type, attributes, appendTo, ...children) => {
+  const el = document.createElement(type)
+
+  for (let key in attributes) {
+    el.setAttribute(key, attributes[key])
+  }
+
+  children.forEach(child => {
+    if (typeof child === 'string') {
+      el.appendChild(document.createTextNode(child))
+    } else {
+      el.appendChild(child)
+    }
+  })
+
+  if (appendTo != "") appendTo.append(el);
+
+  return el
+};
+
 const addMenuContent = () => {
   const menuData = {
     classForHeading: ['starters', 'mainCourses', 'deserts', 'drinks'],
@@ -27,26 +48,6 @@ const addMenuContent = () => {
     }
   };
 
-  // DOM element creator
-  const elFactory = (type, attributes, appendTo, ...children) => {
-    const el = document.createElement(type)
-
-    for (let key in attributes) {
-      el.setAttribute(key, attributes[key])
-    }
-
-    children.forEach(child => {
-      if (typeof child === 'string') {
-        el.appendChild(document.createTextNode(child))
-      } else {
-        el.appendChild(child)
-      }
-    })
-
-    if (appendTo != "") appendTo.append(el);
-
-    return el
-  };
 
   const content = document.getElementById('content');
 
@@ -105,6 +106,7 @@ const addMenuContent = () => {
       itemChanger++;
     }
   })();
+   return { elFactory };
 }
 
 const menu = () => {
@@ -113,5 +115,5 @@ const menu = () => {
 
 export {
   menu,
-  addMenuContent
+  addMenuContent,
 };
