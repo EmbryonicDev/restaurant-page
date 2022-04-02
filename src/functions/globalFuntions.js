@@ -47,6 +47,11 @@ const addHeader = () => {
     clearContent();
     addMenuContent();
   }
+
+  // display contact page
+  contactBtn.onclick = () => {
+    clearContent();
+  }
 }
 
 const addFooter = () => {
