@@ -32,33 +32,35 @@ const addHeader = () => {
   homeBtn.style.cssText = "border-bottom: solid #f1f5f9";
 
   // eListerners
-  // display home page
   (() => {
-
+    // update button styling when page is selected
+    const selectedBtnBorder = (btnOn, btnOff, btnTwoOff) => {
+      btnOn.style.cssText = "border-bottom: solid #f1f5f9";
+      btnOff.style.cssText = "border-bottom: solid transparent";
+      btnTwoOff.style.cssText = "border-bottom: solid transparent";
+    }
+    
+    // display home page
     homeBtn.onclick = () => {
-      homeBtn.style.cssText = "border-bottom: solid #f1f5f9"
-      menuBtn.style.cssText = "border-bottom: solid transparent"
+      selectedBtnBorder(homeBtn, menuBtn, contactBtn);
       clearContent();
       addHomeContent();
     }
-  
+
     // display menu page
     menuBtn.onclick = () => {
-      homeBtn.style.cssText = "border-bottom: solid transparent"
-      menuBtn.style.cssText = "border-bottom: solid #f1f5f9"
+      selectedBtnBorder(menuBtn, homeBtn, contactBtn);
       clearContent();
       addMenuContent();
     }
-  
+
     // display contact page
     contactBtn.onclick = () => {
+      selectedBtnBorder(contactBtn, menuBtn, homeBtn);
       clearContent();
     }
   })();
 }
-
-// style btn bottom border
-
 
 const addFooter = () => {
   const footer = document.createElement('FOOTER');
