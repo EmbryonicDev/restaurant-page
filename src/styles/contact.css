@@ -48,7 +48,8 @@ input:hover{
   border: dotted var(--colorSlate700Transparent)
 }
 
-input:focus-visible {
+input:focus-visible,
+textarea:focus {
   background: var(--colorSlate300)
 }
 
