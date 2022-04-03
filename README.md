@@ -3,6 +3,6 @@ Live demo: https://embryonicdev.github.io/restaurant-page/
 
 - Site built using Javascript, CSS & Webpack. 
 - This was the first time I made use of Webpack.
-- Except for 1 x div, the whole site was built by using DOM manipulation.
+- Except for 1 x div, the whole site was built with DOM manipulation.
 
 
