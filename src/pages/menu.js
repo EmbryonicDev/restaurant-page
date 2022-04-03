@@ -36,8 +36,9 @@ const addMenuContent = () => {
     const menuHeadings = ['Starters', 'Main Courses', 'Deserts', 'Drinks'];
     const contentDiv = elFactory('div', { id: "menuContent" }, content);
     for (let i = 0; i < menuData.classForHeading.length; i++) {
-      elFactory('div', { class: `subSection ${menuData.classForHeading[i]}` }, contentDiv,
+      elFactory('div', { class: `subSection` }, contentDiv,
         elFactory('H3', "", "", menuHeadings[i]),
+        elFactory('div', {class: `itemsWrap ${menuData.classForHeading[i]}`}, '', 
         elFactory('div', { class: 'menuItem' }, '',
           elFactory('div', { class: 'menuIcon' }, '', ""),
           elFactory('div', { class: 'namePrice' }, '',
@@ -45,7 +46,8 @@ const addMenuContent = () => {
             elFactory('span', '', '', '')
           ),
           elFactory('p', '', '', '')
-        ),
+        )
+        )
       );
       // create 3 additional menu items per subSection
       let item = document.querySelector('.menuItem');
