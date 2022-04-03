@@ -35,7 +35,6 @@
 
 .menuItem {
   display: grid;
-  grid-template: fit-content 3fr / repeat(2, fit-content);
   align-items: center;
   background: var(--colorSlate500Transparent);
   border-radius: 8px;
