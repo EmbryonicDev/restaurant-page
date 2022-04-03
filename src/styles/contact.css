@@ -19,6 +19,7 @@
 #contactContent h1 {
   align-self: center;
   margin-bottom: 0;
+  padding: 0 10px;
 }
 
 #contactContent p {
@@ -90,5 +91,10 @@ form button:hover {
   transform: scale(1.2);
   cursor: pointer;
   border: dotted var(--colorSlate700Transparent)
+}
+
+span {
+  color: #fde047;
+  font-weight: 800;
 }
 
