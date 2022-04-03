@@ -19,8 +19,8 @@
 }
 
 .subSection {
-  display: grid;
-  grid-template-columns: repeat(4, 200px);
+  display: flex;
+  flex-direction: column;
   gap: 15px;
   padding: 12px;
   background: var(--colorSlate700Transparent);
@@ -29,11 +29,18 @@
 }
 
 .subSection h3 {
-  grid-column: 1 / span 4;
   margin: 0;
 }
 
+.itemsWrap {
+  display: flex;
+  grid-auto-flow: column;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
 .menuItem {
+  width: 200px;
   display: grid;
   align-items: center;
   background: var(--colorSlate500Transparent);
