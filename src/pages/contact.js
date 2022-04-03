@@ -55,7 +55,7 @@ export const addContactContent = () => {
       // modify H1 & add new paragraph with <span>'s
       contactHeading.innerText = `Thank you for contacting us `;
       elFactory('span', '', contactHeading, name + "!");
-      elFactory('p', '', contentDiv, 'We have received your message with subject: ',
+      elFactory('p', {style: 'padding-bottom: 60px'}, contentDiv, 'We have received your message with subject: ',
         elFactory('span', '', '', '"' + subject + '"'),
         ' and will respond via ',
         elFactory('span', '', '', email),
