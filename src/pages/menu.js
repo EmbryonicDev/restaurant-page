@@ -29,7 +29,6 @@ const addMenuContent = () => {
     }
   };
 
-
   const content = document.getElementById('content');
 
   // create DOM elements (menu items empty at this point)
@@ -87,7 +86,7 @@ const addMenuContent = () => {
       itemChanger++;
     }
   })();
-   return { elFactory };
+  return { elFactory };
 }
 
 const menu = () => {
