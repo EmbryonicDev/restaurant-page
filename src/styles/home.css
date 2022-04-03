@@ -98,7 +98,7 @@ body {
   padding-top: 12px;
 }
 
-.homeImg {
+#homeContent img {
   height: 365px;
   border-radius: 20%;
   border: solid var(--colorYellow300);
