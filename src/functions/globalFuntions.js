@@ -1,5 +1,6 @@
 import { addHomeContent } from "../pages/home";
 import { addMenuContent } from "../pages/menu";
+import { addContactContent } from "../pages/contact";
 
 const addHeader = () => {
   // header
@@ -29,24 +30,38 @@ const addHeader = () => {
   menuBtn.innerText = 'Menu';
   contactBtn.innerText = 'Contact';
   navWrap.append(homeBtn, menuBtn, contactBtn);
-  homeBtn.style.cssText = "border-bottom: solid #f1f5f9"
+  homeBtn.style.cssText = "border-bottom: solid #f1f5f9";
 
   // eListerners
-  // display home page
-  homeBtn.onclick = () => {
-    homeBtn.style.cssText = "border-bottom: solid #f1f5f9"
-    menuBtn.style.cssText = "border-bottom: solid transparent"
-    clearContent();
-    addHomeContent();
-  }
+  (() => {
+    // update button styling when page is selected
+    const selectedBtnBorder = (btnOn, btnOff, btnTwoOff) => {
+      btnOn.style.cssText = "border-bottom: solid #f1f5f9";
+      btnOff.style.cssText = "border-bottom: solid transparent";
+      btnTwoOff.style.cssText = "border-bottom: solid transparent";
+    }
+    
+    // display home page
+    homeBtn.onclick = () => {
+      selectedBtnBorder(homeBtn, menuBtn, contactBtn);
+      clearContent();
+      addHomeContent();
+    }
 
-  // display menu page
-  menuBtn.onclick = () => {
-    homeBtn.style.cssText = "border-bottom: solid transparent"
-    menuBtn.style.cssText = "border-bottom: solid #f1f5f9"
-    clearContent();
-    addMenuContent();
-  }
+    // display menu page
+    menuBtn.onclick = () => {
+      selectedBtnBorder(menuBtn, homeBtn, contactBtn);
+      clearContent();
+      addMenuContent();
+    }
+
+    // display contact page
+    contactBtn.onclick = () => {
+      selectedBtnBorder(contactBtn, menuBtn, homeBtn);
+      clearContent();
+      addContactContent();
+    }
+  })();
 }
 
 const addFooter = () => {
