@@ -71,16 +71,11 @@ const addHeader = () => {
 }
 
 const addFooter = () => {
-  const footer = document.createElement('FOOTER');
-  footer.id = "Myfooter";
-  footer.innerText = "© Embryonic Dev 2022";
-  const footerSpan = document.createElement('span'),
-    footerLogo = document.createElement('img');
-  footerLogo.src = "../src/assets/icons/tree-logo.svg";
-
-  document.body.appendChild(footer);
-  footer.append(footerSpan);
-  footerSpan.append(footerLogo);
+  const footer = elFactory('FOOTER', '', document.body, "© Embryonic Dev 2022",
+    elFactory('span', '', '',
+      elFactory('img', { src: "../src/assets/icons/tree-logo.svg" }, '')
+    )
+  )
 }
 
 const clearContent = () => {
