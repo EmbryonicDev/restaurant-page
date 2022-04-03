@@ -5,6 +5,7 @@
   --colorSlate500Transparent: rgb(100, 116, 139, 0.8);
   --colorSlate700Transparent: rgb(51, 65, 85, 0.8);
   --colorSlate100: #f1f5f9;
+  --colorYellow300: #fde047;
 }
 
 /* menu styling */
@@ -24,6 +25,7 @@
   padding: 12px;
   background: var(--colorSlate700Transparent);
   border-radius: 12px;
+  border: solid var(--colorYellow300);
 }
 
 .subSection h3 {
@@ -37,6 +39,7 @@
   align-items: center;
   background: var(--colorSlate500Transparent);
   border-radius: 8px;
+  border: solid var(--colorYellow300);
 }
 
 .menuItem:hover {
