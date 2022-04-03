@@ -32,6 +32,7 @@ export const addContactContent = () => {
     )
   })();
 
+  // get data from form inputs
   (() => {
     let name = '';
     let email = '';
