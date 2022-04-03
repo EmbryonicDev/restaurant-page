@@ -8,7 +8,9 @@ export const addContactContent = () => {
   (() => {
     const inputPattern = 'pattern="^(?![\s.]+$)[0-9a-zA-Z\s.]*$"';
     elFactory('h1', '', contentDiv, 'Contact us');
-    elFactory('p', '', contentDiv, "Fill in the form below or call us on 518-783-7239 to get in touch. We would be happy to answer your questions & assist you in any way we can.");
+    elFactory('p', '', contentDiv, "Fill in the form below or call us on ",
+      elFactory('span', '', '', '518-783-7239'),
+      "  to get in touch. We would be happy to answer your questions and assist you in any way we can.");
     elFactory('form', { action: '#', id: "form" }, contentDiv,
       elFactory('p', "", '',
         elFactory('label', { for: 'name', class: 'required' }, '', "Name: "),
