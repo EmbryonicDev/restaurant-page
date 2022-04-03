@@ -1,4 +1,4 @@
-import { elFactory } from "./menu";
+import { elFactory } from "../functions/globalFuntions";
 
 export const addContactContent = () => {
   const content = document.getElementById('content');
