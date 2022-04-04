@@ -1,0 +1,126 @@
+:root {
+  --colorSlate300: #cbd5e1;
+  --colorSlate700: #334155;
+  --colorSlate300Transparent: rgb(203, 213, 225, 0.8);
+  --colorSlate700Transparent: rgb(51, 65, 85, 0.8);
+  --colorSlate100: #f1f5f9;
+  --colorYellow300: #fde047;
+}
+
+@font-face {
+  font-family: 'Merienda-Regular';
+  src: url('../assets/font/Merienda/Merienda-Regular.ttf');
+}
+
+body {
+  font-family: 'Merienda-Regular';
+  font-weight: 100;
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../assets/images/burger-fries.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#myHeader {
+  padding-bottom: 10px;
+  width: 100%;
+  height: 8rem;
+  background: var(--colorSlate700);
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0);
+  color: var(--colorSlate100);
+  border-bottom: solid var(--colorYellow300);
+  z-index: 1;
+}
+
+.headerDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-shadow: 0px 10px 8px rgba(0, 0, 0, 0.6);
+}
+
+.navWrap {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 20px;
+}
+
+.navWrap button {
+  width: 80px;
+  border: 0;
+  background-color: transparent;
+  border-bottom: solid transparent;
+  padding-bottom: 16px;
+  color: var(--colorSlate100);
+}
+
+.navWrap button:hover {
+  transform: translateY(-10%);
+  text-shadow: 2px 2px 10px;
+  cursor: pointer;
+}
+
+/* home page styling */
+#homeContent {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  padding: 16px;
+  margin: auto;
+  margin-top: 2rem;
+  background-color: var(--colorSlate700Transparent);
+  color: var(--colorSlate100);
+  top: 125px;
+  border-radius: 12px;
+  border: solid var(--colorYellow300);
+}
+
+#homeContent p {
+  margin: 0;
+  line-height: 1.3rem;
+}
+
+#homeContent p:first-of-type {
+  padding-bottom: 12px;
+}
+
+#homeContent p:last-of-type {
+  padding-top: 12px;
+}
+
+#homeContent img {
+  height: 365px;
+  border-radius: 20%;
+  border: solid var(--colorYellow300);
+}
+
+footer {
+  margin-top: 1rem;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background: var(--colorSlate700);
+  color: var(--colorSlate100);
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  text-align: center;
+  height: 80px;
+  text-shadow: 0px 10px 8px rgba(0, 0, 0, 0.8);
+  border-top: solid var(--colorYellow300);
+}
+
+footer img {
+  height: 2.8rem;
+}

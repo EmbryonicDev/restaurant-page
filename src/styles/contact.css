@@ -1,0 +1,102 @@
+:root {
+  --colorSlate300: #cbd5e1;
+  --colorSlate700: #334155;
+  --colorSlate300Transparent: rgb(203, 213, 225, 0.8);
+  --colorSlate700Transparent: rgb(51, 65, 85, 0.8);
+  --colorSlate100: #f1f5f9;
+  --colorYellow300: #fde047;
+}
+
+#contactContent {
+  margin: 46px 0 0;
+  display: flex;
+  flex-direction: column;
+  width: 550px;
+  background-color: var(--colorSlate700Transparent);
+  color: var(--colorSlate100);
+  border-radius: 12px;
+  border: solid var(--colorYellow300);
+}
+
+#contactContent h1 {
+  align-self: center;
+  margin-bottom: 0;
+  padding: 0 10px;
+}
+
+#contactContent p {
+  margin: 0;
+  padding: 6px 10px;
+}
+
+#contactContent > p {
+  line-height: 1.3rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 32px;
+}
+
+input {
+  line-height: 1.5rem;
+  font-size: 0.9rem;
+  width: 290px;
+  border: solid transparent;
+  border-radius: 4px;
+}
+
+input:hover{
+  border: dotted var(--colorSlate700Transparent)
+}
+
+input:focus-visible,
+textarea:focus {
+  background: var(--colorSlate300)
+}
+
+.required::after {
+  content: " *";
+  color: red
+}
+
+label {
+  display: inline-block;
+  width: 100px;
+  text-align: justify;
+}
+
+textarea {
+  resize: none;
+  overflow-y: scroll;
+  border-radius: 6px;
+}
+
+form > p:last-of-type {
+  display: flex;
+}
+
+form button {
+  color: var(--colorSlate700);
+  align-self: center;
+  margin: 15px 0;
+  height: 2rem;
+  font-weight: 600;
+  padding: 0 20px;
+  border-radius: 6px;
+  background-color: var(--colorSlate100);
+  border: 0;
+}
+
+form button:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+  border: dotted var(--colorSlate700Transparent)
+}
+
+span {
+  color: var(--colorYellow300);
+  font-weight: 800;
+}
+
